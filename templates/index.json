@@ -12,7 +12,7 @@
     "custom_liquid_wRAHrh": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n.liquid-title {\npadding-inline: 50px\n}\n\n.liquid-paragraph {\npadding-inline: 60px\n}\n</style>\n\n<h1 class=\"liquid-title\">{{shop.name}}</h1>\n<p class=\"liquid-paragraph\"> Products : {{shop.products_count }}</p>\n<p class=\"liquid-paragraph\"><b>Contact us : </b> \n{{ shop.email }}</p>\n\n<h2 class=\"liquid-title\">Our Gins</h2>\n{% for product in collections[\"gin\"].products %} \n<h3 class=\"liquid-paragraph\"> {{ product.title }} </h3>\n{% endfor %}\n\n<div>\n<h2 class=\"liquid-title\" > Our Coctails</h2>\n{% for cocktail in shop.metaobjects[\"cocktails\"].values %} \n<h3 class=\"liquid-paragraph\"> {{ cocktail.title }} </h3\n<img  />\n{% endfor %}\n</div>",
+        "custom_liquid": "<style>\n.liquid-title {\npadding-inline: 50px\n}\n\n.liquid-paragraph {\npadding-inline: 60px\n}\n</style>\n\n<h1 class=\"liquid-title\">{{shop.name}}</h1>\n<p class=\"liquid-paragraph\"> Products : {{shop.products_count }}</p>\n<p class=\"liquid-paragraph\"><b>Contact us : </b> \n{{ shop.email }}</p>\n\n<h2 class=\"liquid-title\">Our Gins</h2>\n{% for product in collections[\"gin\"].products %} \n<h3 class=\"liquid-paragraph\"> {{ product.title }} </h3>\n{% endfor %}\n\n<div>\n<h2 class=\"liquid-title\" > Our Coctails</h2>\n{% for cocktail in shop.metaobjects[\"cocktails\"].values %} \n<h3 class=\"liquid-paragraph\"> {{ cocktail.title }} </h3>\n\n{% endfor %}\n</div>",
         "color_scheme": "scheme-3",
         "padding_top": 20,
         "padding_bottom": 20
