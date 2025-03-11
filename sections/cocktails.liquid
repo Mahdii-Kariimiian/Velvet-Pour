@@ -1,7 +1,17 @@
+<div> 
+  <h1> {{ section.settings.headline }} </h1>
+</div>
+
+
+
 {% schema %}
 {
   "name": "Cocktail Carousel" ,
-  "settings": [] ,
+  "settings": [ {
+    "type" : "text" ,
+    "label": "headline" ,
+    "id" : "headline"
+  }] ,
   "blocks": [] ,
   "presets": [
     {"name": "Cocktail viewer"}
