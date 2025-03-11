@@ -1,127 +1,30 @@
 {% schema %}
-{
-  "name": "Cocktails Carousel",
-  "settings": [
-    {
-      "type": "text",
-      "label": "Headline",
-      "id": "headline"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Cocktail",
-      "type": "text",
-      "settings": [
-        {
-          "type": "image_picker",
-          "label": "Cocktail Image",
-          "id": "image"
-        },
-        {
-          "type": "text",
-          "label": "Cocktail Name",
-          "id": "name"
-        },
-        {
-          "type": "url",
-          "label": "Cocktail Recipe Link",
-          "id": "link"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Cocktail Viewer"
-    }
-  ]
-}
-{% endschema %}
-
-<div class="cocktail-carousel">
-  <h2>{{ section.settings.headline }}</h2>
-  <div class="carousel-container">
-    <div class="carousel-wrapper">
-      {% for block in section.blocks %}
-        <div class="cocktail-slide">
-          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.name }}">
-          <p>{{ block.settings.name }}</p>
-          <a href="{{ block.settings.link }}" class="view-recipe">View Recipe</a>
-        </div>
-      {% endfor %}
-    </div>
-    <button class="carousel-prev">&#10094;</button>
-    <button class="carousel-next">&#10095;</button>
-  </div>
-  <a href="/collections/cocktails" class="view-all">View All Cocktails</a>
-</div>
-
-<style>
-.cocktail-carousel {
-  text-align: center;
-  position: relative;
-}
-.carousel-container {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-.carousel-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.cocktail-slide {
-  flex: 0 0 25%; /* Show 4 slides at a time */
-  padding: 10px;
-}
-.carousel-prev, .carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
-.carousel-prev { left: 10px; }
-.carousel-next { right: 10px; }
-.view-all {
-  display: block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  let index = 0;
-  const slides = document.querySelectorAll('.cocktail-slide');
-  const totalSlides = slides.length;
-  const slidesPerPage = 4;
-  const wrapper = document.querySelector('.carousel-wrapper');
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
-
-  function updateCarousel() {
-    wrapper.style.transform = `translateX(-${index * (100 / slidesPerPage)}%)`;
+  {
+    "name": "Cocktails ",
+    "settings": [
+      {
+        "type": "text" ,
+        "label" : "headline" ,
+        "id" : "headline"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "cocktail-block" ,
+        "type": "text" ,
+        "settings": [
+          {
+            "type": "image_picker" ,
+            "label": "image" ,
+            "id": "image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Cocktail Viewer"
+      }
+    ]
   }
-
-  prevBtn.addEventListener('click', function() {
-    if (index > 0) {
-      index--;
-      updateCarousel();
-    }
-  });
-
-  nextBtn.addEventListener('click', function() {
-    if ((index + 1) * slidesPerPage < totalSlides) {
-      index++;
-      updateCarousel();
-    }
-  });
-});
-</script>
+{% endschema %}
