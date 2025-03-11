@@ -1,8 +1,6 @@
-<div> 
-  <h1> {{ section.settings.headline }} </h1>
+<div>
+  <h1>{{ section.settings.headline }}</h1>
 </div>
-
-
 
 {% schema %}
 {
@@ -12,7 +10,25 @@
     "label": "headline" ,
     "id" : "headline"
   }] ,
-  "blocks": [] ,
+  "blocks": [
+    {
+      "name" : "image" ,
+      "type": "image" ,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "image",
+          "id": "image"
+        } ,
+        {
+          "type": "text" ,
+          "label": "title" ,
+          "id": "title"
+        } ,
+
+      ]
+    }
+  ] ,
   "presets": [
     {"name": "Cocktail viewer"}
   ]

@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "cocktails_3VthWF": {
+      "type": "cocktails",
+      "settings": {
+        "headline": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}"
+      }
+    },
     "slideshow_rJgXbQ": {
       "type": "slideshow",
       "blocks": {
@@ -209,6 +215,7 @@
     }
   },
   "order": [
+    "cocktails_3VthWF",
     "slideshow_rJgXbQ",
     "collection_list_e3iU7R",
     "multirow_CHP66q"
