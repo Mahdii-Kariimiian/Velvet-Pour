@@ -131,12 +131,19 @@
           "settings": {
             "collection": "whisky"
           }
+        },
+        "featured_collection_UrFh4X": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tequila"
+          }
         }
       },
       "block_order": [
         "featured_collection_fmQEEE",
         "featured_collection_y4WJEQ",
-        "featured_collection_GVL4Ja"
+        "featured_collection_GVL4Ja",
+        "featured_collection_UrFh4X"
       ],
       "settings": {
         "title": "Our Collections",
