@@ -17,7 +17,7 @@
           "settings": {
             "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
-            "Cocktail-page": "collections-1"
+            "Cocktail-page": ""
           }
         }
       },
