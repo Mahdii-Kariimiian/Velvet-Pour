@@ -15,7 +15,7 @@
         "image_mwKJaE": {
           "type": "image",
           "settings": {
-            "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
+            "image": "shopify://shop_images/tequila-collection-background.webp",
             "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}"
           }
         }
