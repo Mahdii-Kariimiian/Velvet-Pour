@@ -3,7 +3,12 @@
   <div>
    {% for block in section.blocks %}
       <div>
-   <img height="200px" width="200px" src={{ block.image | image_url }} />
+<img 
+  src="{{ block.settings.image | img_url: '600x400' }}" 
+  width="200" 
+  height="200" 
+  alt="{{ block.settings.image.alt | escape }}" 
+/>
         
       </div>
      
