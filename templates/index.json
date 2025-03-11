@@ -11,8 +11,20 @@
   "sections": {
     "cocktails_3VthWF": {
       "type": "cocktails",
+      "blocks": {
+        "image_mwKJaE": {
+          "type": "image",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "image_mwKJaE"
+      ],
       "settings": {
-        "headline": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}"
+        "headline": "Cocktails"
       }
     },
     "slideshow_rJgXbQ": {
