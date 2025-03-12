@@ -11,6 +11,11 @@
 .carousel-item {
   width: 25%;
   box-sizing: border-box;
+  
+}
+
+a {
+  text-decoration:none
 }
 
 .cocktail-image {
