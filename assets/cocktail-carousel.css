@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .carousel-item {
@@ -41,7 +41,7 @@ a {
 }
 
 .cocktail-title:hover::after {
-  transform: translateX(5px);
+  transform: scaleX(1.2);
 }
 
 .cocktail-title:hover {
@@ -49,7 +49,7 @@ a {
 }
 
 .cocktail-image:hover {
-  transform: scale(1.05);
+  transform: translateZ(10px);
 }
 
 @media screen and (max-width: 768px) {
