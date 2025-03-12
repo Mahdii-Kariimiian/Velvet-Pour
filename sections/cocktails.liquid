@@ -1,8 +1,8 @@
 <div>
   <h1>{{ section.settings.headline }}</h1>
-  <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.query }}">
-    <div>
-      {% for cocktail in shop.metaobjects.cocktails.values %}
+  <div>
+    {% for cocktail in shop.metaobjects.cocktails.values %}
+      <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.handle }}">
         <div>
           <img
             src="{{ cocktail.image_file_ | image_url }}"
@@ -11,44 +11,48 @@
           >
           <h2>{{ cocktail.title }}</h2>
         </div>
-      {% endfor %}
-    </div>
-  </a>
+      </a>
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "Cocktail Carousel" ,
-  "settings": [ {
-    "type" : "text" ,
-    "label": "headline" ,
-    "id" : "headline"
-  }] ,
+  "name": "Cocktail Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Headline",
+      "id": "headline"
+    }
+  ],
   "blocks": [
     {
-      "name" : "cocktail" ,
-      "type": "image" ,
+      "name": "cocktail",
+      "type": "image",
       "settings": [
         {
           "type": "image_picker",
-          "label": "image",
+          "label": "Image",
           "id": "image"
-        } ,
+        },
         {
-          "type": "text" ,
-          "label": "title" ,
+          "type": "text",
+          "label": "Title",
           "id": "title"
-        } ,
+        },
         {
-          "type": "text" ,
-          "label": "Coctail-page",
-          "id": "Cocktail-page"
+          "type": "text",
+          "label": "Cocktail Page Handle",
+          "id": "cocktail_handle"
         }
       ]
     }
-  ] ,
+  ],
   "presets": [
-    {"name": "Cocktail viewer"}
+    {
+      "name": "Cocktail Viewer"
+    }
   ]
 }
 {% endschema %}
