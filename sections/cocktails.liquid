@@ -6,7 +6,7 @@
     {% for cocktail in shop.metaobjects.cocktails.values %}
       {{ cocktail.query }}
       <div class="carousel-item">
-        <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.query }}">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
           <div class="cocktail-card">
             <img
               src="{{ cocktail.image_file_ | image_url }}"
