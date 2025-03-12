@@ -26,14 +26,3 @@
   color: #333;
 }
 
-@media screen and (max-width: 749px) {
-  .carousel-item {
-    width: 45%;  /* Adjust for smaller screens */
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .carousel-item {
-    width: 22%;  /* Show 4 items in a row on larger screens */
-  }
-}
