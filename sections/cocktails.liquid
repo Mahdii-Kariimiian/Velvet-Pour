@@ -2,6 +2,7 @@
   <h1>{{ section.settings.headline }}</h1>
   <div>
     {% for cocktail in shop.metaobjects.cocktails.values %}
+      {{ cocktail.handle }}
       <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.handle }}">
         <div>
           <img
