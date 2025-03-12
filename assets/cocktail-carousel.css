@@ -6,16 +6,16 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .carousel-item {
   width: 25%;
   box-sizing: border-box;
-  
 }
 
 a {
-  text-decoration:none
+  text-decoration: none;
 }
 
 .cocktail-image {
@@ -30,5 +30,34 @@ a {
   font-weight: bold;
   margin-top: 20px;
   color: #333;
+  position: relative;
 }
 
+.cocktail-title::after {
+  content: '→';
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cocktail-title:hover::after {
+  transform: translateX(5px);
+}
+
+.cocktail-title:hover {
+  cursor: pointer;
+}
+
+.cocktail-image:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    width: 100%;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+}
