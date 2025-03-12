@@ -10,7 +10,6 @@
 
 .carousel-item {
   box-sizing: border-box;
-  scroll-snap-align: start;
 }
 
 .cocktail-image:hover {
