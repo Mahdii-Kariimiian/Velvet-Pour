@@ -9,25 +9,6 @@
  */
 {
   "sections": {
-    "cocktails_3VthWF": {
-      "type": "cocktails",
-      "blocks": {
-        "image_mwKJaE": {
-          "type": "image",
-          "settings": {
-            "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
-            "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
-            "Cocktail-page": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_mwKJaE"
-      ],
-      "settings": {
-        "headline": "Cocktails"
-      }
-    },
     "slideshow_rJgXbQ": {
       "type": "slideshow",
       "blocks": {
@@ -168,6 +149,25 @@
         "padding_bottom": 20
       }
     },
+    "cocktails_3VthWF": {
+      "type": "cocktails",
+      "blocks": {
+        "image_mwKJaE": {
+          "type": "image",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
+            "cocktail_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mwKJaE"
+      ],
+      "settings": {
+        "headline": "Cocktails"
+      }
+    },
     "multirow_CHP66q": {
       "type": "multirow",
       "blocks": {
@@ -228,9 +228,9 @@
     }
   },
   "order": [
-    "cocktails_3VthWF",
     "slideshow_rJgXbQ",
     "collection_list_e3iU7R",
+    "cocktails_3VthWF",
     "multirow_CHP66q"
   ]
 }
