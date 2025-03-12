@@ -1,6 +1,6 @@
 .cocktail-carousel {
   margin: 20px 0;
-  padding-inline: 46px;
+  padding-inline: 50px;
 
 }
 
@@ -22,11 +22,7 @@
 }
 
 .cocktail-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: none;
-  border-radius: 0;
+
   transition: transform 0.3s ease;
 }
 
