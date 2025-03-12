@@ -39,6 +39,7 @@
   font-weight: bold;
   margin-top: 20px;
   color: #333;
+  text-decoration:none;
 }
 
 @media screen and (max-width: 749px) {
