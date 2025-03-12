@@ -1,14 +1,14 @@
 <div>
   <h1>{{ section.settings.headline }}</h1>
   <div>
-    {% for block in section.blocks %}
+    {% for cocktail in shop.metaobjects.cocktails.values %}
       <div>
         <img
-          src="{{ block.settings.image | image_url }}"
+          src="{{ cocktail.image | image_url }}"
           width="200"
           height="auto"
         >
-        <h2>{{ block.settings.title }}</h2>
+        <h2>{{ cocktail.title }}</h2>
       </div>
     {% endfor %}
   </div>
