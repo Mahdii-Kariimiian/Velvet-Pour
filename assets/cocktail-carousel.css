@@ -15,18 +15,14 @@
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 22%;
+  width: 25%;
   box-sizing: border-box;
-  transition: transform 0.3s ease;
   scroll-snap-align: start;
 }
 
-.cocktail-card {
 
-  transition: transform 0.3s ease;
-}
 
-.cocktail-card:hover {
+.cocktail-image:hover {
   transform: translateY(-5px);
 }
 
