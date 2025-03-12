@@ -19,6 +19,20 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "complementary_9tcYMJ": {
+          "type": "complementary",
+          "repeater": "{{ product.metafields.custom.cocktails_.value }}",
+          "settings": {
+            "block_heading": "Cocktails",
+            "make_collapsible_row": false,
+            "icon": "banana",
+            "product_list_limit": 6,
+            "products_per_page": 3,
+            "pagination_style": "dots",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -71,6 +85,7 @@
         }
       },
       "block_order": [
+        "complementary_9tcYMJ",
         "vendor",
         "title",
         "price",
