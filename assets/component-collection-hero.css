@@ -1,98 +1,98 @@
-.collection-hero__inner {
+/* Container for the entire carousel */
+.cocktail-carousel {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Flex container for carousel items */
+.carousel-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;  /* Allows horizontal scrolling */
+  gap: 20px;
+  scroll-snap-type: x mandatory;  /* Ensures smooth scrolling */
+  padding: 10px 0;
 }
 
-.collection-hero--with-image .collection-hero__inner {
-  margin-bottom: 0;
-  padding-bottom: 2rem;
+/* Each carousel item */
+.carousel-item {
+  flex: 0 0 auto;  /* Prevent items from stretching */
+  width: 22%;  /* Adjust width to display 4 items in a row */
+  scroll-snap-align: start;  /* Align items to the start when scrolling */
+  box-sizing: border-box;  /* Ensure padding is included in width */
+  transition: transform 0.3s ease;
 }
 
-@media screen and (min-width: 750px) {
-  .collection-hero.collection-hero--with-image {
-    padding: calc(4rem + var(--page-width-margin)) 0 calc(4rem + var(--page-width-margin));
-    overflow: hidden;
-  }
-
-  .collection-hero--with-image .collection-hero__inner {
-    padding-bottom: 0;
-  }
+/* Hover effect for cocktail card */
+.cocktail-card {
+  border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+  border-radius: var(--media-radius);
 }
 
-.collection-hero__text-wrapper {
-  flex-basis: 100%;
+.cocktail-card:hover {
+  transform: translateY(-5px);  /* Adds a subtle hover effect */
 }
 
-@media screen and (min-width: 750px) {
-  .collection-hero {
-    padding: 0;
-  }
-
-  .collection-hero__inner {
-    align-items: center;
-    flex-direction: row;
-    padding-bottom: 0;
-  }
+/* Styling for cocktail images */
+.cocktail-image {
+  width: 100%;
+  height: 200px;  /* Ensures all images have the same height */
+  object-fit: cover;  /* Ensures images cover the entire area without stretching */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-.collection-hero__title {
-  margin: 2.5rem 0;
+.cocktail-image:hover {
+  transform: scale(1.05);  /* Adds a zoom effect on hover */
 }
 
-.collection-hero__title + .collection-hero__description {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+/* Title styling */
+.cocktail-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
 }
 
-@media screen and (min-width: 750px) {
-  .collection-hero__title + .collection-hero__description {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .collection-hero__description {
-    max-width: 66.67%;
-  }
-
-  .collection-hero--with-image .collection-hero__description {
-    max-width: 100%;
-  }
-}
-
-.collection-hero--with-image .collection-hero__title {
-  margin: 0;
-}
-
-.collection-hero--with-image .collection-hero__text-wrapper {
-  padding: 5rem 0 4rem;
-}
-
-.collection-hero__image-container {
+/* Container for the image */
+.cocktail-image-container {
   border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
   border-radius: var(--media-radius);
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
+/* Container adjustments for mobile */
 @media screen and (max-width: 749px) {
-  .collection-hero__image-container {
-    height: 20rem;
+  .cocktail-carousel {
+    padding: 10px;
+  }
+
+  .carousel-container {
+    gap: 10px;  /* Adjust gap on smaller screens */
+  }
+
+  .carousel-item {
+    width: 45%;  /* Adjust width for smaller screens */
   }
 }
 
 @media screen and (min-width: 750px) {
-  .collection-hero--with-image .collection-hero__text-wrapper {
-    padding: 4rem 2rem 4rem 0;
-    flex-basis: 50%;
+  .cocktail-carousel {
+    padding: 10px 0;
   }
 
-  .collection-hero__image-container {
-    align-self: stretch;
-    flex: 1 0 50%;
-    margin-left: 3rem;
-    min-height: 20rem;
+  .carousel-container {
+    gap: 20px;  /* Adjust gap for larger screens */
+  }
+
+  .carousel-item {
+    width: 22%;  /* Ensure we display 4 items per row */
   }
 }
