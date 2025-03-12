@@ -3,7 +3,7 @@
   <div>
     {% for cocktail in shop.metaobjects.cocktails.values %}
       {{ cocktail.handle }}
-      <a href="https://velvet-pour.myshopify.com/pages/{{ cocktail.handle }}/{{ cocktail.query }}">
+      <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.query }}">
         <div>
           <img
             src="{{ cocktail.image_file_ | image_url }}"
