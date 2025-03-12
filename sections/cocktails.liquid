@@ -6,6 +6,7 @@
   <div class="carousel-container">
     {% for cocktail in shop.metaobjects.cocktails.values limit: 4 %}
       {% if product.type and product.type == cocktail.base_spirit_ %}
+        {{ product.type }}
         <div class="carousel-item">
           <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
             <div class="cocktail-card">
