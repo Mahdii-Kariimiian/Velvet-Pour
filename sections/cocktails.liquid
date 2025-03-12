@@ -1,17 +1,19 @@
 <div>
   <h1>{{ section.settings.headline }}</h1>
-  <div>
-    {% for cocktail in shop.metaobjects.cocktails.values %}
-      <div>
-        <img
-          src="{{ cocktail.image_file_ | image_url }}"
-          width="200"
-          height="auto"
-        >
-        <h2>{{ cocktail.title }}</h2>
-      </div>
-    {% endfor %}
-  </div>
+  <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.query }}">
+    <div>
+      {% for cocktail in shop.metaobjects.cocktails.values %}
+        <div>
+          <img
+            src="{{ cocktail.image_file_ | image_url }}"
+            width="200"
+            height="auto"
+          >
+          <h2>{{ cocktail.title }}</h2>
+        </div>
+      {% endfor %}
+    </div>
+  </a>
 </div>
 
 {% schema %}
