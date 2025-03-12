@@ -1,7 +1,5 @@
 .cocktail-carousel {
-  margin: 20px 0;
   padding-inline: 50px;
-
 }
 
 .carousel-container {
@@ -15,7 +13,6 @@
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 25%;
   box-sizing: border-box;
   scroll-snap-align: start;
 }
