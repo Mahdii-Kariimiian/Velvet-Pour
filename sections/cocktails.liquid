@@ -4,9 +4,9 @@
   <h1>{{ section.settings.headline }}</h1>
 
   <div class="carousel-container">
-    {{ product.category }}
+    {{ product.title }}
     {% for cocktail in shop.metaobjects.cocktails.values limit: 4 %}
-      {% if product.type and product.type == cocktail.base_spirit_ %}
+      {% if product.title contains cocktail.base_spirit_ %}
         <div class="carousel-item">
           <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
             <div class="cocktail-card">
@@ -34,9 +34,10 @@
       "type": "text",
       "label": "Headline",
       "id": "headline"
-    } , {
-      "type": "color_scheme" ,
-      "label": "color scheme",
+    },
+    {
+      "type": "color_scheme",
+      "label": "Color Scheme",
       "id": "color-scheme"
     }
   ],
