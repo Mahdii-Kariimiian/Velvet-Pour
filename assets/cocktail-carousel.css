@@ -1,59 +1,66 @@
-/* Container for the entire carousel */
 .cocktail-carousel {
   margin: 20px 0;
   text-align: center;
 }
 
-/* Flex container for carousel items */
 .carousel-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  overflow-x: auto;  /* Allows horizontal scrolling */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: auto;
   gap: 20px;
-  scroll-snap-type: x mandatory;  /* Ensures smooth scrolling */
   padding: 10px 0;
 }
 
-/* Each carousel item */
 .carousel-item {
-  flex: 0 0 auto;  /* Prevent items from stretching */
-  width: 22%;  /* Adjust width to display 4 items in a row */
-  scroll-snap-align: start;  /* Align items to the start when scrolling */
-  box-sizing: border-box;  /* Ensure padding is included in width */
+  flex: 0 0 auto;
+  width: 22%;
+  box-sizing: border-box;
   transition: transform 0.3s ease;
+  scroll-snap-align: start;
 }
 
-/* Hover effect for cocktail card */
 .cocktail-card {
   border: 1px solid #ddd;
   padding: 10px;
   background-color: #fff;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: none;
+  border-radius: 0;
+  transition: transform 0.3s ease;
 }
 
 .cocktail-card:hover {
-  transform: translateY(-5px);  /* Adds a subtle hover effect */
+  transform: translateY(-5px);
 }
 
-/* Styling for cocktail images */
 .cocktail-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
   transition: transform 0.3s ease;
 }
 
 .cocktail-image:hover {
-  transform: scale(1.05);  /* Adds a zoom effect on hover */
+  transform: scale(1.05);
 }
 
-/* Title styling */
 .cocktail-title {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
   color: #333;
+}
+
+@media screen and (max-width: 749px) {
+  .carousel-item {
+    width: 45%;  /* Adjust for smaller screens */
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .carousel-item {
+    width: 22%;  /* Show 4 items in a row on larger screens */
+  }
 }
