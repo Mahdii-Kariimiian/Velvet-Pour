@@ -1,5 +1,6 @@
 .cocktail-carousel {
   padding-inline: 50px;
+  background-color: var(--color-background);
 }
 
 .carousel-container {
@@ -25,11 +26,15 @@ a {
   transition: transform 0.3s ease;
 }
 
+.cocktail-image:hover {
+  transform: translateZ(10px);
+}
+
 .cocktail-title {
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
-  color: #333;
+  color: var(--color-text);
   position: relative;
 }
 
@@ -40,11 +45,13 @@ a {
   transition: transform 0.3s ease;
 }
 
+.cocktail-title:hover::after {
+  transform: scaleX(1.5);
+}
 
 .cocktail-title:hover {
   cursor: pointer;
 }
-
 
 @media screen and (max-width: 768px) {
   .carousel-item {
