@@ -1,22 +1,26 @@
 .cocktail-carousel {
   margin: 20px 0;
   text-align: center;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
 }
 
 .carousel-container {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
   padding: 10px 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
   flex: 0 0 auto;
   width: 22%;
   box-sizing: border-box;
-  transition: transform 0.3s ease;
   scroll-snap-align: start;
 }
 
@@ -53,14 +57,36 @@
   color: #333;
 }
 
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
 @media screen and (max-width: 749px) {
   .carousel-item {
-    width: 45%;  /* Adjust for smaller screens */
+    width: 45%;
   }
 }
 
 @media screen and (min-width: 750px) {
   .carousel-item {
-    width: 22%;  /* Show 4 items in a row on larger screens */
+    width: 22%;
   }
 }
