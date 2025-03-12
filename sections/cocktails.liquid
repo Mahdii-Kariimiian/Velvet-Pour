@@ -1,30 +1,24 @@
-<script defer src="{{ 'cocktail-carousel.js' | asset_url }}"></script>
-
 <link href="{{ 'cocktail-carousel.css' | asset_url }}" rel="stylesheet" type="text/css">
 
 <div class="cocktail-carousel">
   <h1>{{ section.settings.headline }}</h1>
-  <div class="carousel-wrapper">
-    <div class="carousel-container">
-      {% for cocktail in shop.metaobjects.cocktails.values %}
-        <div class="carousel-item">
-          <a href="https://velvet-pour.myshopify.com/pages/cocktails/{{ cocktail.query }}">
-            <div class="cocktail-card">
-              <img
-                src="{{ cocktail.image_file_ | image_url }}"
-                width="200"
-                height="auto"
-                alt="{{ cocktail.title }}"
-                class="cocktail-image"
-              >
-              <h2 class="cocktail-title">{{ cocktail.title }}</h2>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-    <button class="carousel-prev">←</button>
-    <button class="carousel-next">→</button>
+  <div class="carousel-container">
+    {% for cocktail in shop.metaobjects.cocktails.values %}
+      <div class="carousel-item">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
+          <div class="cocktail-card">
+            <img
+              src="{{ cocktail.image_file_ | image_url }}"
+              width="200"
+              height="auto"
+              alt="{{ cocktail.title }}"
+              class="cocktail-image"
+            >
+            <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
