@@ -31,8 +31,7 @@
 }
 
 .cocktail-image:hover {
-  transform: scale(1.05);
-  height: initial
+  transform: scaleX(1.05) 
 }
 
 .cocktail-title {
