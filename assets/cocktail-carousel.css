@@ -40,17 +40,11 @@ a {
   transition: transform 0.3s ease;
 }
 
-.cocktail-title:hover::after {
-  transform: scaleX(1.2);
-}
 
 .cocktail-title:hover {
   cursor: pointer;
 }
 
-.cocktail-image:hover {
-  transform: translateZ(10px);
-}
 
 @media screen and (max-width: 768px) {
   .carousel-item {
