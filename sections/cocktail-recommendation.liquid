@@ -1,27 +1,4 @@
-{% if product.metafields.custom.cocktails.value.size > 0 %}
-  <div class="cocktail-carousel">
-    <h2>Recommended Cocktails</h2>
-    <div class="carousel-container">
-      {% for cocktail in product.metafields.custom.cocktails.value %}
-        <div class="carousel-item">
-          <a href="{{ cocktail.cocktail_url.value }}">
-            <div class="cocktail-card">
-              <img
-                src="{{ cocktail.image | image_url }}"
-                width="200"
-                height="auto"
-                alt="{{ cocktail.title.value }}"
-                class="cocktail-image"
-              >
-              <h3 class="cocktail-title">{{ cocktail.title.value }}</h3>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-{% endif %}
-{{ product.metafields.custom.cocktails.value }}
+{{ 'HEELO' }}
 
 {% schema %}
 {
