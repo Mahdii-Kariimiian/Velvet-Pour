@@ -1,11 +1,3 @@
-{{ 'THIS SECTION IS WORKING' }}
-{{ pages.first.metafields.custom.cocktails_.value | json }}
-
-{% for cocktail in pages.first.metafields.custom.cocktails_.value %}
-  }
-  {{ cocktail.title }}
-{% endfor %}
-
 {% schema %}
 {
   "name": "Cocktail recommendation",
