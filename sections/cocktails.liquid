@@ -6,7 +6,7 @@
   <div class="carousel-container">
     {% for block in section.blocks limit: 4 %}
       <div class="carousel-item">
-        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ block.settings.cocktail_handle }}">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ block.settings.cocktail_URL }}">
           <div class="cocktail-card">
             <img
               src="{{ block.settings.image | image_url }}"
@@ -50,8 +50,8 @@
         },
         {
           "type":"text",
-          "label": "Cocktail Page Handle",
-          "id": "cocktail_handle"
+          "label": "Cocktail URL",
+          "id": "cocktail_URL"
         }
       ]
     }
