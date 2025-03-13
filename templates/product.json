@@ -38,6 +38,13 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "text_qJJtEy": {
+          "type": "text",
+          "settings": {
+            "text": "Alcohol Percentage : {{ product.metafields.custom.alcohol_percentage.value }} %",
+            "text_style": "uppercase"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -69,6 +76,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "text_qJJtEy",
         "buy_buttons",
         "description",
         "text_qcJaJB",
