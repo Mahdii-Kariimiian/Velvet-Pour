@@ -115,10 +115,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "cocktails_DgXt7V": {
+      "type": "cocktails",
+      "settings": {
+        "headline": "{{ product.metafields.custom.cocktails_ | metafield_text: field: 'title' }}",
+        "color-scheme": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "cocktails_DgXt7V"
   ]
 }
