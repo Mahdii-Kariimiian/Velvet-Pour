@@ -5,6 +5,7 @@
 
   <div class="carousel-container">
     {% for cocktail in section.blocks limit: 4 %}
+      {{ cocktail }}
       <div class="carousel-item">
         <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
           <div class="cocktail-card">
