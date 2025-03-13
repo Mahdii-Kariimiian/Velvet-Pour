@@ -5,22 +5,20 @@
 
   <div class="carousel-container">
     {% for cocktail in shop.metaobjects.cocktails.values limit: 4 %}
-      {% if product.title contains cocktail.base_spirit_ %}
-        <div class="carousel-item">
-          <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
-            <div class="cocktail-card">
-              <img
-                src="{{ cocktail.image_file_ | image_url }}"
-                width="200"
-                height="auto"
-                alt="{{ cocktail.title }}"
-                class="cocktail-image"
-              >
-              <h2 class="cocktail-title">{{ cocktail.title }}</h2>
-            </div>
-          </a>
-        </div>
-      {% endif %}
+      <div class="carousel-item">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
+          <div class="cocktail-card">
+            <img
+              src="{{ cocktail.image_file_ | image_url }}"
+              width="200"
+              height="auto"
+              alt="{{ cocktail.title }}"
+              class="cocktail-image"
+            >
+            <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+          </div>
+        </a>
+      </div>
     {% endfor %}
   </div>
 </div>
