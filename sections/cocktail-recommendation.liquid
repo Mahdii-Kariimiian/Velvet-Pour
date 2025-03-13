@@ -1,7 +1,6 @@
 {{ 'THIS SECTION IS WORKING' }}
-{{ pages.metafields.custom.Cocktails | json }}
 
-{% for cocktail in product.metafields.custom.cocktails.value %}
+{% for cocktail in pages.first.metafields.custom.cocktails_.value %}
   }
   {{ cocktail.title }}
 {% endfor %}
