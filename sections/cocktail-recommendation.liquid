@@ -1,5 +1,6 @@
 {{ 'THIS SECTION IS WORKING' }}
-{{ shop.metaobjects | json }}
+{{ pages.metafields.custom.cocktails_list | json }}
+
 {% for cocktail in product.metafields.custom.cocktails.value %}
   }
   {{ cocktail.title }}
