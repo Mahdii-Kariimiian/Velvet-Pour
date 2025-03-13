@@ -151,9 +151,21 @@
     },
     "cocktails_3VthWF": {
       "type": "cocktails",
+      "blocks": {
+        "cocktail_UtjMLe": {
+          "type": "cocktail",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
+            "cocktail_handle": "{{ metaobjects.cocktails[\"old-fashioned\"].query.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "cocktail_UtjMLe"
+      ],
       "settings": {
-        "headline": "Cocktails",
-        "color-scheme": "scheme-1"
+        "headline": "Cocktails"
       }
     },
     "multirow_CHP66q": {
