@@ -116,17 +116,16 @@
         "padding_bottom": 28
       }
     },
-    "cocktails_DgXt7V": {
-      "type": "cocktails",
+    "cocktail_recommendation_7xRxtV": {
+      "type": "cocktail-recommendation",
       "settings": {
-        "headline": "{{ product.metafields.custom.cocktails_ | metafield_text: field: 'title' }}",
-        "color-scheme": ""
+        "headline": ""
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "cocktails_DgXt7V"
+    "cocktail_recommendation_7xRxtV"
   ]
 }
