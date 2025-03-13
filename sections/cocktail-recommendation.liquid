@@ -1,3 +1,9 @@
+<div>
+  {% for cocktail in product.metafields.custom.cocktails.value %}
+    {{ cocktail.title }}
+  {% endfor %}
+</div>
+
 {% schema %}
 {
   "name": "Cocktail recommendation",
