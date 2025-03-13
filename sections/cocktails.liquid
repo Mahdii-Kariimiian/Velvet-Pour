@@ -4,19 +4,18 @@
   <h1>{{ section.settings.headline }}</h1>
 
   <div class="carousel-container">
-    {% for cocktail in section.blocks limit: 4 %}
-      {{ cocktail }}
+    {% for block in section.blocks limit: 4 %}
       <div class="carousel-item">
-        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ block.settings.query }}">
           <div class="cocktail-card">
             <img
-              src="{{ cocktail.image_file_ | image_url }}"
+              src="{{ block.settings.image_file_ | image_url }}"
               width="200"
               height="auto"
-              alt="{{ cocktail.title }}"
+              alt="{{ block.settings.title }}"
               class="cocktail-image"
             >
-            <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+            <h2 class="cocktail-title">{{ block.settings.title }}</h2>
           </div>
         </a>
       </div>
