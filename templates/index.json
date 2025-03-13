@@ -154,15 +154,46 @@
       "blocks": {
         "cocktail_UtjMLe": {
           "type": "cocktail",
+          "source": "{{ metaobjects.cocktails[\"old-fashioned\"] }}",
           "settings": {
             "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
-            "cocktail_handle": "{{ metaobjects.cocktails[\"old-fashioned\"].query.value }}"
+            "cocktail_handle": "{{ metaobjects.cocktails[\"old-fashioned\"].base_spirit_.value }}"
+          }
+        },
+        "cocktail_YdxUy3": {
+          "type": "cocktail",
+          "source": "{{ metaobjects.cocktails[\"whiskey-sour\"] }}",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"whiskey-sour\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"whiskey-sour\"].title.value }}",
+            "cocktail_handle": "{{ metaobjects.cocktails[\"whiskey-sour\"].base_spirit_.value }}"
+          }
+        },
+        "cocktail_XRmN7z": {
+          "type": "cocktail",
+          "source": "{{ metaobjects.cocktails[\"gin-tonic\"] }}",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"gin-tonic\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"gin-tonic\"].title.value }}",
+            "cocktail_handle": "{{ metaobjects.cocktails[\"gin-tonic\"].base_spirit_.value }}"
+          }
+        },
+        "cocktail_B7JcTx": {
+          "type": "cocktail",
+          "source": "{{ metaobjects.cocktails[\"tom-collins\"] }}",
+          "settings": {
+            "image": "{{ metaobjects.cocktails[\"tom-collins\"].image_file_.value }}",
+            "title": "{{ metaobjects.cocktails[\"tom-collins\"].title.value }}",
+            "cocktail_handle": "{{ metaobjects.cocktails[\"tom-collins\"].base_spirit_.value }}"
           }
         }
       },
       "block_order": [
-        "cocktail_UtjMLe"
+        "cocktail_UtjMLe",
+        "cocktail_YdxUy3",
+        "cocktail_XRmN7z",
+        "cocktail_B7JcTx"
       ],
       "settings": {
         "headline": "Cocktails"
