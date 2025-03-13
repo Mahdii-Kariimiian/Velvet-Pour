@@ -1,7 +1,36 @@
 {% schema %}
 {
-  "name": "Cocktail Recommendation ",
-  "settings": [] ,
+  "name": "Cocktail recommendation",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Headline",
+      "id": "headline"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "cocktail",
+      "type": "cocktail",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type":"text",
+          "label": "Cocktail Page Handle",
+          "id": "cocktail_handle"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Cocktail Recommendation"
