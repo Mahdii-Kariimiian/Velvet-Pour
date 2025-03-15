@@ -1,24 +1,30 @@
-{% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
+<link href="{{ 'cocktail-carousel.css' | asset_url }}" rel="stylesheet" type="text/css">
 
-{% for cocktail in cocktails %}
-  {{ cocktail.title }}
-  {% if product.category.upcase == cocktail.base_spirit_.upcase %}
-    <div class="carousel-item">
-      <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL }}">
-        <div class="cocktail-card">
-          <img
-            src="{{ cocktail.image | image_url }}"
-            width="200"
-            height="auto"
-            alt="{{ cocktail.title }}"
-            class="cocktail-image"
-          >
-          <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+{% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
+<div class="cocktail-carousel">
+  <h1>Cocktails made by {{ product.category }}</h1>
+  <div class="carousel-container">
+    {% for cocktail in cocktails %}
+      {{ cocktail.title }}
+      {% if product.category.upcase == cocktail.base_spirit_.upcase %}
+        <div class="carousel-item">
+          <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL }}">
+            <div class="cocktail-card">
+              <img
+                src="{{ cocktail.image | image_url }}"
+                width="200"
+                height="auto"
+                alt="{{ cocktail.title }}"
+                class="cocktail-image"
+              >
+              <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-  {% endif %}
-{% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
 
 {% schema %}
 {
