@@ -8,6 +8,9 @@
       {% assign product_spirit = product.metafields.custom.category | strip | upcase %}
       {% assign cocktail_spirit = cocktail.base_spirit_ | strip | upcase %}
 
+      {{ product_spirit }}
+      {{ cocktail_spirit }}
+
       {% if cocktail_spirit == product_spirit %}
         <div class="carousel-item">
           <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
