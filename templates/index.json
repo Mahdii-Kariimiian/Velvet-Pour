@@ -256,28 +256,12 @@
         "padding_top": 44,
         "padding_bottom": 20
       }
-    },
-    "video_xCBJdj": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/wiskey-background.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "scheme-fc08d463-f7c5-42d1-88a0-9bbf56fc599d",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "slideshow_rJgXbQ",
     "collection_list_e3iU7R",
     "cocktails_3VthWF",
-    "multirow_CHP66q",
-    "video_xCBJdj"
+    "multirow_CHP66q"
   ]
 }
