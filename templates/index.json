@@ -158,7 +158,7 @@
           "settings": {
             "image": "{{ metaobjects.cocktails[\"old-fashioned\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"old-fashioned\"].title.value }}",
-            "cocktail_handle": "{{ metaobjects.cocktails[\"old-fashioned\"].base_spirit_.value }}"
+            "cocktail_URL": ""
           }
         },
         "cocktail_YdxUy3": {
@@ -167,7 +167,7 @@
           "settings": {
             "image": "{{ metaobjects.cocktails[\"whiskey-sour\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"whiskey-sour\"].title.value }}",
-            "cocktail_handle": "{{ metaobjects.cocktails[\"whiskey-sour\"].base_spirit_.value }}"
+            "cocktail_URL": ""
           }
         },
         "cocktail_XRmN7z": {
@@ -176,7 +176,7 @@
           "settings": {
             "image": "{{ metaobjects.cocktails[\"gin-tonic\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"gin-tonic\"].title.value }}",
-            "cocktail_handle": "{{ metaobjects.cocktails[\"gin-tonic\"].base_spirit_.value }}"
+            "cocktail_URL": ""
           }
         },
         "cocktail_B7JcTx": {
@@ -185,7 +185,7 @@
           "settings": {
             "image": "{{ metaobjects.cocktails[\"tom-collins\"].image_file_.value }}",
             "title": "{{ metaobjects.cocktails[\"tom-collins\"].title.value }}",
-            "cocktail_handle": "{{ metaobjects.cocktails[\"tom-collins\"].base_spirit_.value }}"
+            "cocktail_URL": ""
           }
         }
       },
@@ -256,12 +256,28 @@
         "padding_top": 44,
         "padding_bottom": 20
       }
+    },
+    "video_xCBJdj": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/wiskey-background.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "scheme-fc08d463-f7c5-42d1-88a0-9bbf56fc599d",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow_rJgXbQ",
     "collection_list_e3iU7R",
     "cocktails_3VthWF",
-    "multirow_CHP66q"
+    "multirow_CHP66q",
+    "video_xCBJdj"
   ]
 }
