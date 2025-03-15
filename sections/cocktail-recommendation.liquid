@@ -5,10 +5,9 @@
   <h1>Cocktails made by {{ product.category }}</h1>
   <div class="carousel-container">
     {% for cocktail in cocktails %}
-      {{ cocktail.title }}
       {% if product.category.upcase == cocktail.base_spirit_.upcase %}
         <div class="carousel-item">
-          <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL }}">
+          <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL.value }}">
             <div class="cocktail-card">
               <img
                 src="{{ cocktail.image | image_url }}"
