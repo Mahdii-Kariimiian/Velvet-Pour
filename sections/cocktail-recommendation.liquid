@@ -1,6 +1,7 @@
 {% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
 
 {% if cocktails.size > 0 %}
+  {{ 'HI' }}
   {% for cocktail in cocktails %}
     {% if product.title contains cocktail.title %}
       <div class="carousel-item">
