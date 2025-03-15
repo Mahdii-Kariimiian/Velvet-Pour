@@ -4,7 +4,7 @@
 <div class="cocktail-carousel">
   <h1>Cocktails made by {{ product.category }}</h1>
   <div class="carousel-container">
-    {% for cocktail in cocktails %}
+    {% for cocktail in cocktails limit: 4 %}
       {% if product.category.upcase == cocktail.base_spirit_.upcase %}
         <div class="carousel-item">
           <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.query }}">
@@ -28,13 +28,7 @@
 {% schema %}
 {
   "name": "Cocktail recommendation",
-  "settings": [
-    {
-      "type": "text",
-      "label": "Headline",
-      "id": "headline"
-    }
-  ],
+
   "presets": [
     {
       "name": "Cocktail Recommendation"
