@@ -1,6 +1,7 @@
 {% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
 
 {% for cocktail in cocktails %}
+  {{ cocktail.title }}
   {% if product.title contains cocktail.title %}
     <div class="carousel-item">
       <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL }}">
