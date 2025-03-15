@@ -1,5 +1,25 @@
-{{ product.collections.first.metafields.custom.cocktails_collection.value | json }}
+{% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
 
+{% if cocktails.size > 0 %}
+  {% for cocktail in cocktails %}
+    {% if product.title contains cocktail.title %}
+      <div class="carousel-item">
+        <a href="https://velvet-pour.myshopify.com/pages/cocktail/{{ cocktail.cocktail_URL }}">
+          <div class="cocktail-card">
+            <img
+              src="{{ cocktail.image | image_url }}"
+              width="200"
+              height="auto"
+              alt="{{ cocktail.title }}"
+              class="cocktail-image"
+            >
+            <h2 class="cocktail-title">{{ cocktail.title }}</h2>
+          </div>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
 {% schema %}
 {
   "name": "Cocktail recommendation",
