@@ -1,15 +1,14 @@
 <link href="{{ 'cocktail-carousel.css' | asset_url }}" rel="stylesheet" type="text/css">
 
 {% assign cocktails = product.collections.first.metafields.custom.cocktails_collection.value %}
+
 <div class="cocktail-carousel">
   <h1>Cocktails made by {{ product.category }}</h1>
+
   <div class="carousel-container">
     {% for cocktail in cocktails limit: 4 %}
       {% assign product_spirit = product.category | strip | upcase %}
       {% assign cocktail_spirit = cocktail.base_spirit_ | strip | upcase %}
-
-      {{ product_spirit }}
-      {{ cocktail_spirit }}
 
       {% if cocktail_spirit == product_spirit %}
         <div class="carousel-item">
