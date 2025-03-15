@@ -5,7 +5,7 @@
   <h1>Cocktails made by {{ product.category }}</h1>
   <div class="carousel-container">
     {% for cocktail in cocktails limit: 4 %}
-      {% assign product_spirit = product.metafields.custom.category | strip | upcase %}
+      {% assign product_spirit = product.category | strip | upcase %}
       {% assign cocktail_spirit = cocktail.base_spirit_ | strip | upcase %}
 
       {{ product_spirit }}
