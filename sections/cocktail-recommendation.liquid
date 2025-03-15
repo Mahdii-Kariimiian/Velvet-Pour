@@ -1,4 +1,17 @@
-{{ collection.metafields.custom.cocktails_collection.vlaue | json }}
+{%- assign collection = product.collections.first -%}
+
+{% if collection and collection.metafields.custom.cocktails %}
+  <div class="cocktail-list">
+    {% for cocktail in collection.metafields.custom.cocktails.value %}
+      {% if cocktail.type == product.metafields.custom.spirit_type %}
+        <div class="cocktail-item">
+          <h3>{{ cocktail.title }}</h3>
+          <p>{{ cocktail.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
 
 {% schema %}
 {
