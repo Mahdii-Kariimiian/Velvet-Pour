@@ -22,7 +22,7 @@
         "text_QqzBEC": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to our website! I’m a passionate Shopify developer, dedicated to creating beautiful and highly functional e-commerce sites. With years of experience in Shopify development, I’ve designed this site to showcase the potential of stunning, user-friendly online stores.</p><p>If you're looking to elevate your e-commerce business with a sleek, responsive design and seamless shopping experience, feel free to reach out. Whether you're just starting or looking to revamp your existing store, I’m here to help bring your vision to life.</p><p>For inquiries, design requests, or just to say hello, don’t hesitate to send me an email. Let’s build something amazing together!</p>",
+            "text": "<p>Welcome to my website! I’m a passionate Shopify developer, dedicated to creating beautiful and highly functional e-commerce sites. I’ve designed this site to showcase the potential of stunning, user-friendly online stores.</p><p>If you're looking to elevate your e-commerce business with a sleek, responsive design and seamless shopping experience, feel free to reach out. Whether you're just starting or looking to revamp your existing store, I’m here to help bring your vision to life.</p><p>For inquiries, design requests, or just to say hello, don’t hesitate to send me an email. Let’s build something amazing together! Feel free to message, and I'll respond shortly</p>",
             "text_style": "subtitle"
           }
         }
@@ -49,7 +49,7 @@
     "contact_form_MfdcAy": {
       "type": "contact-form",
       "settings": {
-        "heading": "Contact form",
+        "heading": "",
         "heading_size": "h1",
         "color_scheme": "scheme-fc08d463-f7c5-42d1-88a0-9bbf56fc599d",
         "padding_top": 36,
